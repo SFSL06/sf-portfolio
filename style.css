@@ -20,7 +20,7 @@
   }
   
   p {
-    margin: 10px;
+    margin: 5px;
   } 
   
   .header {
@@ -66,27 +66,43 @@
   }
 
   .AboutMe{
-    text-align: center;
+    text-align: right;
     grid-area: AboutMe;
+    padding-right: 5px;
+    /*to set right border */
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-color: #023e4a;
+    ;
   }
   .myBackground{
     display: flex;
-    align-items: center;
+    align-items:flex-start;
     justify-content: center;
     grid-area: myBackground;
   }
 
   .Work{
-    text-align: center;
+    text-align: right;
     grid-area: Work;
+    padding-right: 5px;
+    /*to set right border */
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-color: #023e4a;
   }
   .Projects{
     text-align: center;
     grid-area: Projects
   }
   .Contact{
-    text-align: center;
-    grid-area: Contact
+    text-align: right;
+    grid-area: Contact;
+    padding-right: 5px;
+    /*to set right border */
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-color: #023e4a;
   }
   .ContactInfo{
     text-align: center;
@@ -96,7 +112,7 @@
   /* Portfolio Grid CSS */
 
 #PortfolioGrid {
-  margin: 0px 5%;
+  margin: 5px;
   display: grid;
   min-height: 500px;
   height: 70vh;
@@ -112,29 +128,45 @@
 #Project1 {
   grid-area: SurfReport;
   background-image: url("images/02-portfolio-4.jpg");
+  justify-content:left;
+  align-items: end;
+  padding-bottom: 10px;
+  border:#15849a;
+  border-width: 5px;
+  cursor: pointer;
 }
 
 #Project2 {
   grid-area: LEDWall;
   background-image: url("images/02-portfolio-1.jpg");
+  justify-content:left;
+  align-items: end;
+  padding-bottom: 10px;
+  cursor: pointer;
 }
 
 #Project3 {
   grid-area: Calculator;
   background-image: url("images/02-portfolio-2.jpg");
-  justify-content: space-around;
+  justify-content:left;
+  align-items: end;
+  padding-bottom: 10px;
   cursor: pointer;
 }
 #Project4 {
   grid-area: PastelPuzzles;
   background-image: url("images/02-portfolio-3.jpg");
-  justify-content: space-around;
+  justify-content:left;
+  align-items: end;
+  padding-bottom: 10px;
   cursor: pointer;
 }
 #Project5 {
   grid-area: RunBuddy;
   background-image: url("images/02-run-buddy.jpg");
-  justify-content: space-around;
+  justify-content:left;
+  align-items: end;
+  padding-bottom: 10px;
   cursor: pointer;
 }
 .PortfolioGridArea {
@@ -149,11 +181,56 @@
 }
 
 .heading {
-  background-color: rgba(27, 184, 179, 0.7);
+  
   padding: 5px;
   height: 35px;
   color: rgb(6, 6, 6);
   font-size: 18px;
-  border-color: 5px solid #15849a;
+
 }
 
+#ContactInfoGrid {
+  margin: 5px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%
+  grid-gap: 5px;
+  grid-template-areas:
+  "PhoneNumber Webpage Twitter Githubpage Spotify";
+}
+
+.ContactGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+ }
+#PhoneNumber {
+  grid-area: PhoneNumber;
+  align-items: center;
+  justify-content:center;
+  padding-bottom: 10px;
+  cursor: pointer
+}
+#Webpage {
+  grid-area: Webpage;
+  align-items: center;
+  padding-bottom: 10px;
+  cursor: pointer
+}
+#Twitter {
+  grid-area: Twitter;
+  align-items: center;
+  cursor: pointer
+}
+#Githubpage {
+  grid-area: Githubpage;
+  align-items: center;
+  cursor: pointer
+}
+#Spotify {
+  grid-area: Spotify;
+  align-items: center;
+  cursor: pointer
+}
