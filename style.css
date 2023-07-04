@@ -21,6 +21,7 @@
   
   p {
     margin: 5px;
+    font-size: 18px;
   } 
 
 .header {
@@ -70,31 +71,37 @@
 
 /*using media queries to make it responsive  */
 
-@media only screen and (max-width : 200px) 
-{
-   .nav {
+
+@media screen and (max-width: 720px) {
+  p {
+    font-size: 10px;
+  }
+  flexContactInfo {
     flex-direction: column;
-    
+    }
+  .MainGrid {grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-flow: row;}
 }
 
-   .flexContactInfo {
+@media only screen and (max-width : 320px) 
+{
+  .nav {
+    flex-direction: column;
+    
+  }
+   flexContactInfo {
    flex-direction: column;
- }
-/*.MainGrid{
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 5fr 1fr 1fr ;
-  grid-template-columns: 100%;
-  grid-template-areas: 
-  "AboutMe"
-   "myBackground"
-  "Work"
-  "Projects"
-  "Contact"
-   "ContactInfo"
-   } */
+   }
+}
+   .MainGrid {grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-flow: row;}
 
- }
-/*Page Title, Portfolio owner's name*/
+   .PortfolioGrid {grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));}
+   .myBackground {
+    font-size: 10px;
+  }
+
+ /*Page Title, Portfolio owner's name*/
 .Title {
   position: relative;
   float: left;
@@ -112,9 +119,11 @@
   
   .MainGrid {
     display: grid;
+    margin : 0 auto;
+    max-width: 1200px;
     grid-template-columns: 25% 75%;
     grid-template-rows: 20% 80% 20%;
-    gap: 20px;
+    grid-gap: 1 rem;
     grid-template-areas: 
     "AboutMe myBackground"
     "Work Projects"
@@ -247,11 +256,12 @@
   flex-direction: row;
   align-items: center;
   justify-content:center;
- }
+  }
 
 .item {
   flex-grow: 1;
-  height: 100px;
+  height: 50px;
+
 }
 
 .item + .item {
