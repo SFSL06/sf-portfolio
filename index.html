@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
+  <title>Sabeen Faisal // Web Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
   
-<h1>Sabeen Faisal</h1>
+
+<div class = navbar>  
+
+  <div class = "main">
+    <h1>Sabeen Faisal</h1>
+</div>
  <!-- navigation bar at the top -->
- <nav>  
-  <div class="center">
-    <a href="#">About Me</a>
+
+  <div class="menu">
+ 
+    <a href="#" target="_blank">About Me </a>
     <a href="#">Work</a>
     <a href="#">Contact Me</a>
-    <a href="#">Resume</a> -->
-  </nav>
+    <a href="#">Resume</a>
+  </div>
 </div>
 
 <div class="header">
@@ -26,15 +32,6 @@
     </h1>
 </div>
 
-<!-- <div class="menu">
-  <ul>
-    <li>About Me</li>
-    <li>Work</li>
-    <li>Contact Me</li>
-  </ul>
-</div>
-
---->
 <body>
 <div class = "MainGrid">
     <div class = "AboutMe"> 
@@ -47,7 +44,7 @@
     </div>
     <div class = "Work"> 
         <h1> Work </h1>     
-    </div>
+</div>
     
 <!-- Portfolio Projects Section -->
 
@@ -72,26 +69,15 @@
 <div class = "Contact">  
     <h1> Contact Me </h1>    
 </div>
-<!-- Contacts Section-->    
-<section id ="ContactInfoGrid">
-  <div id="PhoneNumber"class = "ContactInfoGrid">
-    <div class="heading"> 0044 123 4456789 </div>
-  </div>
-  <div id="Webpage"class = "ContactInfoGrid">
-    <a href="#">www.sfaisal@website.com </a>
-  </div>
-  <div id="Twitter"class = "ContactInfoGrid">
-    <a href="#">Twitter</a>
-  </div>
-  <div id="Githubpage"class = "ContactInfoGrid"></div>
-    <a href="#">Github</a>
-  </div>
-  <div id="Spotify"class = "ContactInfoGrid">
-    <a href="#">Spotify</a>
-  </div>
+<!-- Using flexbox to make the contact section-->  
 
-</section>
-
+<div class="flexContactInfo">
+  <div class = "item"> <p> 0044 123 4456789 </p> </div>
+  <div class = "item"> <a href="#">www.sfaisal@website.com </a></div>
+  <div class = "item"> <a href="#">Twitter</a></div> 
+  <div class = "item"> <a href="#">Github Page</a></div>
+  <div class = "item"> <a href="#">Spotify</a></div> 
+</div>
 
 </body>
 </html>
