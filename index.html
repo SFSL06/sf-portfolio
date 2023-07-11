@@ -30,55 +30,58 @@
 </div>
 
 <body>
-<div class = "MainGrid">
-    <div class = "AboutMe"> 
-        <h1> About Me </h1>       
-    </div>
-    <div class = "myBackground"> 
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend. Erat nam at lectus urna. Laoreet id donec ultrices tincidunt arcu. Volutpat consequat mauris nunc congue nisi. Semper viverra nam libero justo laoreet. Commodo sed egestas egestas fringilla.
-        </p>         
-    </div>
-    <div class = "Work"> 
-        <h1> Work </h1>     
-    </div>    
-<!-- Portfolio Projects Section -->
-    <div class="PortfolioGrid">
-       <div id="Project1" class="PortfolioGridArea"> 
-        <div class="heading">
-        <a href="www.surfreport.com"> Surf Report </a></div>
-        </div>
-       <div id="Project2" class="PortfolioGridArea">
-        <div class="heading">
-        <a href="www.ledwall.com"> LED Wall </a></div>
-        </div>
-       <div id="Project3" class="PortfolioGridArea">
-        <div class="heading">
-        <a href="www.calculator.com"> Calculator </a></div>
-       </div>
-      <div id="Project4" class="PortfolioGridArea">
-      <div class="heading">
-        <a href="www.pastelpuzzles.com"> Pastel Puzzles </a></div>
-      </div>
-      <div id="Project5" class="PortfolioGridArea">
-      <div class="heading">
-      <a href="www.runbuddy.com"> Run Buddy </a></div>
-     </div>
-   </div>
 
+<!-- Nested flex containers to display info about me and my projects-->
+  
+<section class='FlexContainer aboutMe'>
+<div class="aboutMeCol"> <h1> About Me </h1></div>
+<div class="myDetailCol">
+  <p>
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend. Erat nam at lectus urna. Laoreet id donec ultrices tincidunt arcu. </div>
+</p>
+</section>
+<section class='FlexContainer Work'>
+  <div class="workCol"><h1> Work </h1></div>
+    <div class = "projCol">
+        <button type="SurfReport">
+        <img src="Images/02-portfolio-4.jpg" alt="SurfReport"/>
+        </button>
+  
+        <button type="LEDWall">
+        <img src="Images/02-portfolio-1.jpg" alt="LEDWall"/>
+        </button>
+     
+        <div class = "calculator">
+        <button type="Calculator">
+        <img src="Images/02-portfolio-2.jpg" alt="Calculator"/>
+        </button>
+      
+      
+        <button type="PastelPuzzles">
+        <img src="Images/02-portfolio-3.jpg" alt="PastelPuzzles"/>
+        </button>
+      
+        <button type="RunBuddy">
+        <img src="Images/02-run-buddy.jpg" alt="RunBuddy"/>
+        </button> 
+      
+    </div>
+</section>
+
+<!--Section to show Contact Info -->
+
+<section class='FlexContainer'>
 <div class = "Contact">  
-    <h1> Contact Me </h1>    
+  <h1> Contact Me </h1>    
 </div>
-<!-- Using flexbox to make the contact section-->  
-
 <div class="flexContactInfo">
-  <div class = "item"> <p> 0044 123 4456789 </p> </div>
-  <div class = "item"> <a href="#">www.sfaisal@website.com </a></div>
-  <div class = "item"> <a href="https://twitter.com/">Twitter</a></div> 
-  <div class = "item"> <a href="https://github.com/SFSL06/sf-portfolio">Github Page</a></div>
-  <div class = "item"> <a href="#">https://www.spotify.com</a></div> 
-</div>
+<div> <p> 0044 123 4456789 </p> </div>
+<div> <a href="#">www.sfaisal@website.com </a></div>
+<div> <a href="https://twitter.com/">Twitter</a></div> 
+<div> <a href="https://github.com/SFSL06/sf-portfolio">Github Page</a></div>
+<div> <a href="#">https://www.spotify.com</a></div> 
 
-</div>
+</section>
+
 </body>
 </html>
-

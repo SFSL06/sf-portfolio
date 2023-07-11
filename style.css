@@ -10,7 +10,9 @@
     line-height: 1.5;
   }
   
-  h1,
+  h1 {
+    font-size:x-large;
+  }
   h2,
   h3,
   h4,
@@ -20,7 +22,7 @@
   }
   
   p {
-    margin: 5px;
+    margin: 5 px;
     font-size: 18px;
   } 
 
@@ -76,11 +78,10 @@
   p {
     font-size: 10px;
   }
-  flexContactInfo {
+  aboutMe, Work, ContactMe {
     flex-direction: column;
     }
-  .MainGrid {grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-auto-flow: row;}
+ 
 }
 
 @media only screen and (max-width : 320px) 
@@ -89,17 +90,20 @@
     flex-direction: column;
     
   }
-   flexContactInfo {
+  .aboutMe{
    flex-direction: column;
    }
-}
-   .MainGrid {grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-auto-flow: row;}
-
-   .PortfolioGrid {grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));}
-   .myBackground {
-    font-size: 10px;
+  .Work{
+    flex-direction: column;
   }
+  
+  .contactMe{
+    flex-direction: column;
+      }
+     
+  
+}
+   
 
  /*Page Title, Portfolio owner's name*/
 .Title {
@@ -117,114 +121,9 @@
   }
  
   
-  .MainGrid {
-    display: grid;
-    margin : 0 auto;
-    max-width: 1200px;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 20% 80% 20%;
-    grid-gap: 1 rem;
-    grid-template-areas: 
-    "AboutMe myBackground"
-    "Work Projects"
-    "Contact ContactInfo"
-  }
-
-  .AboutMe{
-    text-align: right;
-    grid-area: AboutMe;
-    /*to set right border */
-    border-right-style: solid;
-    border-right-width: 2px;
-    border-color: #025363;
-    ;
-  }
-  .myBackground{
-    display: flex;
-    align-items:flex-start;
-    justify-content: center;
-    grid-area: myBackground;
-  }
-
-  .Work{
-    text-align: right;
-    grid-area: Work;
-    /*to set right border */
-    border-right-style: solid;
-    border-right-width: 2px;
-    border-color: #025363;
-  }
-
-  .PortfolioGrid {
-    /*margin: 5px;*/
-    display: grid;
-    grid-area: Projects;
-    min-height: 500px;
-    height: 70vh;
-    grid-template-rows: 60% 20% 20%;
-    grid-template-columns: 50% 50%;
-    grid-gap: 10px;
-    grid-template-areas:
-    "SurfReport SurfReport"
-    "LEDWall Calculator"
-    "PastelPuzzles RunBuddy";
-  
-  }
-  .PortfolioGridArea {
-    background-position: center;
-    background-repeat: no-repeat;
-    /*background-size: cover;*/
-
-   /* position: relative;*/
-    border-color: rgb(131, 245, 245);
-    border: 2px ;
-   
-  }
-  
-  #Project1 {
-    grid-area: SurfReport;
-    background-image: url("Images/02-portfolio-4.jpg");
-    padding-bottom: 10px;
-    cursor: pointer;
-  /*  border: 5px #025363; */
-  }
-  
-  #Project2 {
-    grid-area: LEDWall;
-    background-image: url("Images/02-portfolio-1.jpg");
-    padding-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  #Project3 {
-    grid-area: Calculator;
-    background-image: url("Images/02-portfolio-2.jpg");
-    padding-bottom: 10px;
-    cursor: pointer;
-  }
-  #Project4 {
-    grid-area: PastelPuzzles;
-    background-image: url("Images/02-portfolio-3.jpg");
-    padding-bottom: 10px;
-    cursor: pointer;
-  }
-  #Project5 {
-    grid-area: RunBuddy;
-    background-image: url("Images/02-run-buddy.jpg");
-    justify-content:left;
-    align-items: end;
-    padding-bottom: 10px;
-    cursor: pointer;
-  }
   
   .heading {
-    
-   /* padding: 5px;
-    height: 35px;
-    width: 10px
-    color: rgb(6, 6, 6);
-    font-size: 18px;
-    background-color: rgb(131, 245, 245);*/
+
     position: relative;
     float:left;
     height: 35px;
@@ -233,37 +132,61 @@
     font-size: 18px;
     background-color: rgb(131, 245, 245); 
   }
-  .Contact{
-    text-align: right;
-    grid-area: Contact;
-    /*padding-right: 5px;*/
-    /*to set right border */
-    border-right-style: solid;
-    border-right-width: 2px;
-    border-color: #025363;
-  }
-/*  .ContactInfo{
-    text-align: center;
-    grid-area: ContactInfo
-  } */
 
-.ContactInfo a:hover {
-  background-color: white;
-  color: rgb(115, 3, 18);
+  .FlexContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    background-color: lightblue;;
+    overflow:auto;
 }
-.flexContactInfo {
+ .flexContactInfo {
+  display:flex
+  align-items: flex-start;
+  justify-content: center
+ }
+ .aboutMe{
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content:center;
+ }
+ .Work {
+  display: flex;
+ }
+ .contactMe{
+  display: flex;
+ }
+
+/*To adjust col widths */
+.aboutMeCol {
+  flex-basis: 20%
+  align-items: flex-start;
+  justify-content: center;
+ }
+ .myDetailCol {
+   flex-basis: 80%;
+   align-items: flex-start;
+   justify-content:space-between;
+ }
+
+ .workCol {
+  flex-basis: 20%;
+  align-items: flex-start;
+  justify-content: center;
+}
+.projCol{
+  flex-basis: 80%;
   }
 
-.item {
-  flex-grow: 1;
-  height: 50px;
 
+/* Buttons to view Projects */
+button {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
 }
 
-.item + .item {
-  margin-left: 2%;
+img {
+  width: 400px;
+  height: 200px;
+  
 }
